@@ -1,0 +1,30 @@
+<html>
+<body>
+	<p id="str"></p>
+	<input type="text" name="textinput" id="textinput">
+	<button id="but" name="check" onclick="check.isEmpty()"> string check</button>
+	<script>
+	document.getElementById("str").innerHTML = "Enter your string";
+	function isemptycheck()
+	{
+		this.isEmpty=function()
+										{
+											var x = document.getElementById("textinput").value;
+
+											if(x.length==0)
+											{
+												document.write("true");
+											}
+											else
+											{
+												document.write("false");
+											}
+										}
+
+	}
+	var check = new isemptycheck();
+	</script>
+
+
+</body>
+</html>
