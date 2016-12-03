@@ -1,0 +1,34 @@
+<html>
+<head>
+<body>
+
+	<p id="p1" draggable="true">Abhijeet Kothawade</p>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	
+<script>
+
+$(document).ready(function(){
+								$("#p1").hover(function(){
+
+												$("#p1").mousemove(function(){
+
+															$("#p1").mouseup(function(){
+    														$(this).css({"color":"red"});
+															});
+
+
+															$("#p1").mousedown(function(){
+    														$(this).css({"color":"red"});
+															});
+
+												});
+								});
+
+					$("#p1").mouseleave(function(){
+    				$(this).css({"color":"black"});
+  					 });
+});
+</script>
+</body>
+</head>
+</html>

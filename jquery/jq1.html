@@ -1,0 +1,57 @@
+<html>
+<head>
+<style>
+#div1{
+position: absolute;
+border: 1px solid black;
+margin: auto;	
+width: 20%;
+height: 30%;
+top:20%;
+left: 40%;
+
+
+}
+#text1{
+	float: left;
+	margin-left: 70px;
+}
+#text2{
+	float: left;
+	margin-left: 70px;
+}
+#label1
+{
+margin-left: 70px;
+
+}
+#label2
+{
+margin-left: 70px;
+
+}
+
+
+</style>
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+i = 0;
+$(document).ready(function(){
+    $("#text1").keyup(function(){
+        $("#text2").val(i += 1);
+
+    });
+});
+</script>
+<body>
+<div id="div1">
+		
+		<p id="label1">Text:</p><input type="text"  id="text1" placeholder="Enter your text here:"></input></br>
+		
+		<p id="label2">keypresses:</p><input type="text" id="text2" palceholder="No of Keypress:"></input>
+		
+</div>
+</body>
+</html>
