@@ -1,0 +1,110 @@
+<html>
+	<head>
+	
+
+	</head>
+<body onload="load1()">
+
+
+
+
+		<div id="div1">
+			<img id="img" src="tudip.jpeg" style=>
+		</div>
+
+			<button id="like" onclick="like()">LIKE</button> </br><p id="p1">0</p> 
+
+			<button id="disslike" onclick="unlike()">UNLIKE</button></br> <p id="p2">0</p>
+
+	
+			
+		
+
+<script >
+var likes;
+var unlikes;
+
+			function like()
+			{
+				likes=parseInt(localStorage.getItem("likepic1"));
+				if(typeof(Storage) !== "undefined") 
+				{
+					likes=likes+1;
+        			
+        				document.getElementById("p1").innerHTML =likes;
+        				localStorage.setItem("likepic1",likes);
+  				} 
+  				 else 
+  				{
+        			document.getElementById("p1").innerHTML = "Sorry, your browser does not support web storage...";
+    			}
+					
+			}
+
+			
+
+		function unlike()
+		{
+			unlikes=parseInt(localStorage.getItem("disslikes"));
+			if(typeof(Storage) !== "undefined")
+			{
+				unlikes = unlikes +1;
+				document.getElementById("p2").innerHTML=unlikes;
+				localStorage.setItem("disslikes",unlikes);
+			}
+			else
+			{
+				document.getElementById("p2").innerHTML = "Sorry, your browser does not support web storage...";
+			}
+		}
+
+function jsona(likesss,disslikess)
+{
+try
+	{
+	var testObject = { 'one': likesss, 'two': disslikess};
+
+// Put the object into storage
+localStorage.setItem('testObject', JSON.stringify(testObject));
+
+}catch(err)
+{
+document.write(err);s
+
+}
+
+}
+
+
+		function load1()
+			{
+					var n=localStorage.getItem("likepic1");
+					var x=localStorage.getItem("disslikes");
+					if (n==null && m==null) {
+
+					localStorage.setItem("likepic1",0);
+					localStorage.setItem("disslikes",0);
+					}
+					else
+					{
+
+						document.getElementById("p1").innerHTML =localStorage.getItem("likepic1") ;
+						document.getElementById("p2").innerHTML =localStorage.getItem("disslikes");
+
+					}
+
+			}
+			
+
+		</script>
+
+
+
+
+
+
+	</body>
+
+
+
+</html>
